@@ -16,7 +16,17 @@ to the console, waits 3 more seconds and then writes
 console.log('Go!')
 
 // PLACE YOUR CODE BELOW
+wait(1).then(function (res) { // (**)
 
+  console.log('I waited '+ res +' second'); // 1
+  return 3;
+
+}).then(function (sec) { // (***)
+  console.log('I waited ' + sec + ' more seconds'); // 1
+// 2
+  return 'done';
+
+})
 // PLACE YOUR CODE ABOVE
 /*
 You console output should look like the following AND wait the

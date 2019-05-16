@@ -1,6 +1,11 @@
 var getSecondElement, secondElement
 
 /*
+I feel there is a problem with the arguments passsed. The elementToReturn value is 2
+so the array element that will be returned is the 3rd element. So instead of tiger bear will be returned.
+*/
+
+/*
 Implement the below code so that createGetFunction returns a function.  That returned
 function should accept an array and return whichever element was specified by the
 parameter passed to createGetFunction when it was called.
@@ -8,7 +13,10 @@ parameter passed to createGetFunction when it was called.
 function createGetFunction(elementToReturn) {
   // PLACE YOUR CODE BELOW
 
-
+  var newFunc = function(arr) {
+    return arr[elementToReturn];
+  }
+  return newFunc;
   // PLACE YOUR CODE ABOVE
 }
 
