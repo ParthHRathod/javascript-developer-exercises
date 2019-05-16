@@ -12,7 +12,17 @@ function paintMixer(color1, color2) {
   The order of the params should not matter.
   */
   // PLACE YOUR CODE BELOW
-
+  if((color1 === 'blue' || color1 === 'red') && (color2 === 'blue' || color2 === 'red') && (color1 !== color2)) {
+    return 'purple';
+  } else if ((color1 === 'green' || color1 === 'red') && (color2 === 'green' || color2 === 'red') && (color1 !== color2)) {
+    return 'brown';
+  } else if ((color1 === 'blue' || color1 === 'yellow') && (color2 === 'blue' || color2 === 'yellow') && (color1 !== color2)) {
+    return 'green';
+  } else if ((color1 === 'red' || color1 === 'yellow') && (color2 === 'red' || color2 === 'yellow') && (color1 !== color2)) {
+    return 'orange';
+  } else {
+    return 'unknown';
+  }
   // PLACE YOUR CODE ABOVE
 }
 

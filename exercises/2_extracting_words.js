@@ -21,7 +21,11 @@ Place your code that does all of this below this comment block, and
 before the next comment block.
 */
 // PLACE YOUR CODE BELOW
-
+var temp = '';
+words.map((item) => {
+  temp += item[1]+item[2]+', ';
+});
+wordList = temp.substring(0, temp.length-2);
 // PLACE YOUR CODE ABOVE
 /*
 When run with "node 2_extracting_words.js" you should see the following on

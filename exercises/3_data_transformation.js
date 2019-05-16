@@ -68,12 +68,16 @@ function convertRideshareArray(array) {
     initialArray into an array that is equal to expectedArray
     */
     // PLACE YOUR CODE BELOW
-
+    return {
+      rideShareId : element.id,
+      numberMembers : element.members.length
+    };
     // PLACE YOUR CODE ABOVE
   })
 
   return newArray
 }
+
 
 assert.deepEqual(expectedArray, convertRideshareArray(initialArray), 'Arrays are not equal') || console.log('Success')
 
