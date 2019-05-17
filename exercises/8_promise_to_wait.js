@@ -2,7 +2,7 @@
 // the specified number of seconds has passed
 const wait = function(seconds) {
   return new Promise(function(resolve, reject) {
-    setTimeout(resolve, 1000 * seconds)
+    setTimeout(resolve(1), 1000 * seconds)
   })
 }
 
@@ -16,13 +16,12 @@ to the console, waits 3 more seconds and then writes
 console.log('Go!')
 
 // PLACE YOUR CODE BELOW
-wait(1).then(function (res) { // (**)
-
-  console.log('I waited '+ res +' second'); // 1
+var sec = 4;
+wait(sec).then(function (one) { // (**)
+  console.log(`I waited ${one} second`); // 1
   return 3;
-
-}).then(function (sec) { // (***)
-  console.log('I waited ' + sec + ' more seconds'); // 1
+}).then(function (result) { // (***)
+  console.log('I waited ' + result + ' more seconds'); // 1
 // 2
   return 'done';
 
